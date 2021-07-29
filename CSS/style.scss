@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    height: 100vh;
+    cursor: url('../img/download.png'), auto;
+    background:rgb(27, 27, 27)
+}
+.cursor{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: myAni .5s infinite alternate;
+}
+.cursor::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid grey;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: myAni2 .5 infinite alternate;
+}
+
+@keyframes myAni {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.7);
+    }
+    
+    
+}
+
+@keyframes myAni2 {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.4);
+    }
+}
+@keyframes myAni3 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand{
+    animation: myAni3 .5s forwards;
+    border: 2px solid red;
+}
